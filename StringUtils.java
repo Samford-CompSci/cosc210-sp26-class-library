@@ -30,5 +30,6 @@ public class StringUtils {
         }
         String[] words = s.trim().split("\\s+");
         return words.length;
+        
     }
 }
