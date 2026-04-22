@@ -63,6 +63,15 @@ public class StringUtils {
     }
     // Your assigned method goes below this line.
     // Follow the same format: Javadoc comment, then the method.
+    // this method counts the number of words in a string, where words are separated by the space character. It returns o if there isn't words.
+    public static int countWords(String s){
+        if (s == null || s.trim().isEmpty()) {
+            return 0;
+        }
+        String[] words = s.trim().split("\\s+");
+        return words.length;
+        
+    }
     /**
      * Counts the number of occurrences of a given character in a string.
      *
