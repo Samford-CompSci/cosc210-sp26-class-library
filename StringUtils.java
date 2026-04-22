@@ -113,4 +113,23 @@ public class StringUtils {
         return count;
     }
 
+
+    /**
+     * Returns the initials of the given string.
+     * Example: initials("John Doe") returns "JD".
+     *
+     * @param s the string to check
+     * @return the initials of s
+     */
+    public static String initials(String s) {
+        String[] words = s.split(" ");
+        StringBuilder result = new StringBuilder();
+        for (String word : words) {
+            if (!word.isEmpty()) {
+                result.append(Character.toUpperCase(word.charAt(0)));
+            }
+        }
+        return result.toString();
+    }
+
 }
