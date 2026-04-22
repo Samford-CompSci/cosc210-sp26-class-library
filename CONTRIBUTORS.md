@@ -6,3 +6,4 @@ Add your name and your method below when your PR is merged.
 |---|---|
 | Professor Scott Crews | isPalindrome |
 | Georgia Hipp | swapCase |
+| Aiden Fisher | toTitleCase |
