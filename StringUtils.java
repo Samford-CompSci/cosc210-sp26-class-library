@@ -21,6 +21,25 @@ public class StringUtils {
         return cleaned.equals(reversed);
     }
 
+    /**
+     * Converts the given string to title case (first letter of each word capitalized, the rest lowercase).
+     * Example: toTitleCase("hello world") returns "Hello World".
+     *
+     * @param s the string to convert
+     * @return the title-cased version of s
+     */
+    public static String toTitleCase(String s){
+        String[] words = s.split(" ");
+        StringBuilder titleCased = new StringBuilder();
+        for (String word : words) {
+            if (!word.isEmpty()) {
+                titleCased.append(Character.toUpperCase(word.charAt(0)))
+                          .append(word.substring(1).toLowerCase())
+                          .append(" ");
+            }
+        }
+        return titleCased.toString().trim();
+    }
     // Your assigned method goes below this line.
     /**
      * Truncates the given string to the specified maximum length, adding "..." if it was truncated.
