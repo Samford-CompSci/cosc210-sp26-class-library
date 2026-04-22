@@ -126,4 +126,22 @@ public class StringUtils {
         return result.toString();
     }
 
+    /**
+     * Wraps a string to a given line width by inserting newlines every {@code width} characters.
+     * Does not split on word boundaries. Example: wrapLine("Hello World", 5) returns "Hello\n Worl\nd\n".
+     *
+     * @param s     the string to wrap
+     * @param width the maximum number of characters per line
+     * @return the wrapped string with newlines inserted at every {@code width} characters
+     */
+    public static String wrapLine(String s, int width) {
+        StringBuilder wrapped = new StringBuilder();
+        int index = 0;
+        while (index < s.length()) {
+            wrapped.append(s, index, Math.min(index + width, s.length()));
+            wrapped.append("\n");
+            index += width;
+        }
+        return wrapped.toString();
+    }
 }
