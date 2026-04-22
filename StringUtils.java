@@ -22,6 +22,21 @@ public class StringUtils {
     }
 
     // Your assigned method goes below this line.
+    /**
+     * Truncates the given string to the specified maximum length, adding "..." if it was truncated.
+     * Example: truncate("Hello, world!", 5) returns "Hello...".
+     *
+     * @param s the string to truncate
+     * @param max the maximum length of the truncated string (not including the "...")
+     * @return the truncated string if it exceeds max length, otherwise returns s unchanged
+     */
+    public static String truncate(String s, int max) {
+        if (s.length() <= max) {
+            return s;
+        } else {
+            return s.substring(0, max) + "...";
+        }
+    }
     // Follow the same format: Javadoc comment, then the method.
 
 }
