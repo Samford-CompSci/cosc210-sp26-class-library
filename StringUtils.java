@@ -23,5 +23,21 @@ public class StringUtils {
 
     // Your assigned method goes below this line.
     // Follow the same format: Javadoc comment, then the method.
+    /**
+     * Counts the number of occurrences of a given character in a string.
+     *
+     * @param s the string to search
+     * @param c the character to count
+     * @return the number of times c appears in s
+     */
+    public static int countOccurrences(String s, char c) {
+        int count = 0;
+        for (char ch : s.toCharArray()) {
+            if (ch == c) {
+                count++;
+            }
+        }
+        return count;
+    }
 
 }
