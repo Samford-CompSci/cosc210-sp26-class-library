@@ -22,6 +22,27 @@ public class StringUtils {
     }
 
     /**
+     * Returns a new string where all uppercase letters in the input string are converted to lowercase,
+     * and all lowercase letters are converted to uppercase. Non-alphabetic characters are unchanged.
+     * Example: swapCase("Hello, World!") returns "hELLO, wORLD"
+     * 
+     * @param s the string to swap case
+     * @return a new string with swapped case
+     */
+    public static String swapCase(String s) {
+        StringBuilder result = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                result.append(Character.toLowerCase(c));
+            } else if (Character.isLowerCase(c)) {
+                result.append(Character.toUpperCase(c));
+            } else {
+                result.append(c);
+            }
+        }
+        return result.toString();
+    }
+
      * Converts the given string to title case (first letter of each word capitalized, the rest lowercase).
      * Example: toTitleCase("hello world") returns "Hello World".
      *
