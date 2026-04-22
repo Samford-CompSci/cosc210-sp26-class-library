@@ -24,4 +24,21 @@ public class StringUtils {
     // Your assigned method goes below this line.
     // Follow the same format: Javadoc comment, then the method.
 
+    /**
+     * Returns a wrapped st.
+     * 
+     *
+     * @param s the string to check
+     * @return true if s is a palindrome, false otherwise
+     */
+    public static String wrapLine(String s, int width) {
+        StringBuilder wrapped = new StringBuilder();
+        int index = 0;
+        while (index < s.length()) {
+            wrapped.append(s, index, Math.min(index + width, s.length()));
+            wrapped.append("\n");
+            index += width;
+        }
+        return wrapped.toString();
+    }
 }
