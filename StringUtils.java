@@ -39,22 +39,4 @@ public class StringUtils {
     }
     // Follow the same format: Javadoc comment, then the method.
 
-    /**
-     * Returns the count of vowels in the given string.
-     * Counts both uppercase and lowercase vowels.
-     *
-     * @param s the string to count vowels in
-     * @return the number of vowels in s
-     */
-    public static int countVowels(String s) {
-        int count = 0;
-        String vowels = "aeiouAEIOU";
-        for (char c : s.toCharArray()) {
-            if (vowels.indexOf(c) != -1) {
-                count++;
-            }
-        }
-        return count;
-    }
-
 }
