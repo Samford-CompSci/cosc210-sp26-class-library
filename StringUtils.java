@@ -25,11 +25,12 @@ public class StringUtils {
     // Follow the same format: Javadoc comment, then the method.
 
     /**
-     * Returns a wrapped st.
-     * 
+     * Wraps a string to a given line width by inserting newlines every {@code width} characters.
+     * Does not split on word boundaries. Example: wrapLine("Hello World", 5) returns "Hello\n Worl\nd\n".
      *
-     * @param s the string to check
-     * @return true if s is a palindrome, false otherwise
+     * @param s     the string to wrap
+     * @param width the maximum number of characters per line
+     * @return the wrapped string with newlines inserted at every {@code width} characters
      */
     public static String wrapLine(String s, int width) {
         StringBuilder wrapped = new StringBuilder();
